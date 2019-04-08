@@ -46,13 +46,13 @@ Reads `fractions.dat` binary file and returns the joint progenitor probability f
       -s SFR, --SFR SFR     SFR in M_sun/yr
     
 
-    **-z** *redshift*
+**-z** *redshift*
 
-    **-m** *log10(stellar mass / M_sun)*
+**-m** *log10(stellar mass / M_sun)*
 
-    **-p** *percentile of local number density* in the range [0,100] (see [Martin et al. 2018a](https://doi.org/10.1093/mnras/stx3057 "Martin+18a"))
+**-p** *percentile of local number density* in the range [0,100] (see [Martin et al. 2018a](https://doi.org/10.1093/mnras/stx3057 "Martin+18a"))
 
-    **-s** *star formation rate in M_sun/yr*
+**-s** *star formation rate in M_sun/yr*
 
 #### Importing the package
 ```
