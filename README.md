@@ -19,18 +19,18 @@ Reads `fractions.dat` binary file and returns the joint progenitor probability f
 * scipy
 
 ### Installation:
-    ```
+    
     pip install git+https://github.com/garrethmartin/progenitor-fractions.git
-    ```
+    
 
 ### Usage:
 
 #### Using the built-in script:
-    ```
+    
     tabulate_progenitor_probability.py -z 0.4 -m 10.8
     0.266751184855
-    ```
-    ```
+    
+    
     tabulate_progenitor_probability.py --help
 
     usage: tabulate_progenitor_probability.py [-h] [-z REDSHIFT] [-m MASS]
@@ -44,7 +44,7 @@ Reads `fractions.dat` binary file and returns the joint progenitor probability f
       -p DENSITY, --density DENSITY
                             Local number density percentile [0,100]
       -s SFR, --SFR SFR     SFR in M_sun/yr
-    ```
+    
 
     **-z** *redshift*
 
