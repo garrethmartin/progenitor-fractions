@@ -2,7 +2,7 @@
 
 ### Reference:
 [***Martin et al. 2018a***](https://doi.org/10.1093/mnras/stx3057 "Martin+18a"),
-*Martin, G., Kaviraj, S., Devriendt J. E. G., Dubois Y., Pichon C. and Laigle C.*
+*Martin, G., Kaviraj, S., Devriendt J. E. G., Dubois Y., Pichon C. and Laigle C., MNRAS, 474, 3140*
 
 
 ### Contact:
