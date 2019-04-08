@@ -18,35 +18,45 @@ Reads `fractions.dat` binary file and returns the joint progenitor probability f
 * numpy
 * scipy
 
+### Installation:
+    ```
+    pip install git+https://github.com/garrethmartin/progenitor-fractions.git
+    ```
+
 ### Usage:
 
-```
-python tabulate_progenitor_probability.py -z 0.4 -m 10.8
+#### Using the built-in script:
+    ```
+    tabulate_progenitor_probability.py -z 0.4 -m 10.8
+    0.266751184855
+    ```
+    ```
+    tabulate_progenitor_probability.py --help
 
+    usage: tabulate_progenitor_probability.py [-h] [-z REDSHIFT] [-m MASS]
+                                              [-p DENSITY] [-s SFR]
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      -z REDSHIFT, --redshift REDSHIFT
+                            Redshift
+      -m MASS, --mass MASS  Log10 stellar mass/M_sun
+      -p DENSITY, --density DENSITY
+                            Local number density percentile [0,100]
+      -s SFR, --SFR SFR     SFR in M_sun/yr
+    ```
+
+    **-z** *redshift*
+
+    **-m** *log10(stellar mass / M_sun)*
+
+    **-p** *percentile of local number density* in the range [0,100] (see [Martin et al. 2018a](https://doi.org/10.1093/mnras/stx3057 "Martin+18a"))
+
+    **-s** *star formation rate in M_sun/yr*
+
+#### Importing the package
+```
+from progenitor_probability import progenitor_probability
+>>> progenitor_probability(redshift=0.4, mass=10.8)
 0.266751184855
 ```
-
-```
-python tabulate_progenitor_probability.py --help
-
-usage: tabulate_progenitor_probability.py [-h] [-z REDSHIFT] [-m MASS]
-                                          [-p DENSITY] [-s SFR]
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -z REDSHIFT, --redshift REDSHIFT
-                        Redshift
-  -m MASS, --mass MASS  Log10 stellar mass/M_sun
-  -p DENSITY, --density DENSITY
-                        Local number density percentile [0,100]
-  -s SFR, --SFR SFR     SFR in M_sun/yr
-```
-
-**-z** *redshift*
-
-**-m** *log10(stellar mass / M_sun)*
-
-**-p** *percentile of local number density* in the range [0,100] (see [Martin et al. 2018a](https://doi.org/10.1093/mnras/stx3057 "Martin+18a"))
-
-**-s** *star formation rate in M_sun/yr*
-
