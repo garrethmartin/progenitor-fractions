@@ -20,7 +20,7 @@ Reads `fractions.dat` binary file and returns the joint progenitor probability f
 
 ### Installation:
     
-    pip install git+https://github.com/garrethmartin/progenitor-fractions.git
+    pip install progenitor-probability
     
 
 ### Usage:
