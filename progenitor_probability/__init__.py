@@ -3,7 +3,9 @@ import numpy as np
 from scipy.io import FortranFile
 from scipy.interpolate import griddata
 import os
+import warnings
 
+np.seterr(all='warn')
 
 def progenitor_probability(density=None, sfr=None, mass=None, redshift=None):
     """
@@ -38,7 +40,9 @@ def progenitor_probability(density=None, sfr=None, mass=None, redshift=None):
         weights = n_galaxies
         n_galaxies = np.sum(n_galaxies, axis=i)
         n_spiral_progenitors = np.sum(n_spiral_progenitors, axis=i)
-        bins = np.delete(np.nanmean(bins, axis=i+1), i, axis=0)
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", category=RuntimeWarning)
+            bins = np.delete(np.nanmean(bins, axis=i+1), i, axis=0)
     data_size = np.product(dims)
 
     n_galaxies = np.reshape(n_galaxies, data_size)
